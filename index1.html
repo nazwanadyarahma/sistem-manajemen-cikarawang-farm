@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cikarawang Farm</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            overflow-y:scroll;
+            scroll-snap-type:y mandatory;
+        }
+
+        section{
+            height:100vh;
+            scroll-snap-align:start;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+        }
+
+        .slide1{ background:#dff5e1; }
+        .slide2{ background:#f8f9fa; }
+        .slide3{ background:#fff3cd; }
+        .slide4{ background:#d1ecf1; }
+        .slide5{ background:#f8d7da; }
+
+        h1,h2{
+            margin-bottom:20px;
+        }
+
+        .card-container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+            width:80%;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+
+        button{
+            margin-top:20px;
+            padding:10px 20px;
+            border:none;
+            background:green;
+            color:white;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        /* Tablet */
+        @media(max-width:768px){
+            .card-container{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+
+        /* Mobile */
+        @media(max-width:480px){
+            .card-container{
+                grid-template-columns:1fr;
+            }
+
+            h1{
+                font-size:24px;
+                text-align:center;
+            }
+
+            h2{
+                font-size:20px;
+                text-align:center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1 -->
+    <section class="slide1">
+        <h1>Sistem Manajemen Cikarawang Farm</h1>
+        <p>Kelola peternakan dengan lebih efisien</p>
+        <button>Mulai</button>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide2">
+        <h2>Data Ternak</h2>
+        <div class="card-container">
+            <div class="card">Sapi A - Sehat</div>
+            <div class="card">Sapi B - Sakit</div>
+            <div class="card">Kambing A - Sehat</div>
+        </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide3">
+        <h2>Monitoring Pakan</h2>
+        <div class="card">Stok Pakan: 200 Kg</div>
+        <button>Update Stok</button>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide4">
+        <h2>Jadwal Perawatan</h2>
+        <div class="card-container">
+            <div class="card">Senin - Vaksin</div>
+            <div class="card">Rabu - Pembersihan Kandang</div>
+        </div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide5">
+        <h2>Laporan Farm</h2>
+        <p>Lihat hasil produksi dan laporan harian</p>
+        <button>Download PDF</button>
+    </section>
+
+</body>
+</html>
